@@ -69,7 +69,6 @@ func (ping *pingHandler)start(){
 		ipType = "udp6"
 	}
 
-	//c,err := icmp.ListenPacket(ipType,ListenAddr)
 	c, err := icmp.ListenPacket(ipType, ListenAddr)
 	c.IPv4PacketConn().SetControlMessage(ipv4.FlagTTL, true)
 
@@ -87,15 +86,19 @@ func (ping *pingHandler)start(){
 			fmt.Println(err.Error())
 		}
 		preprossedPacket,err :=ping.receiveICMP(c)
+
+
 		if err!=nil {
-			fmt.Printf("Error is: %s", err.Error())
+			//fmt.Printf("Error is: %s", err.Error())
+			continue
 		}
 
 		err = ping.processPacket(preprossedPacket)
-		preprossedPacket.rtt = time.Now().Sub(receivedAt)
+
 		if err !=nil{
-			fmt.Errorf(err.Error())
+			fmt.Errorf("An error has occured: ",err.Error())
 		}
+		preprossedPacket.rtt = time.Since(receivedAt)
 		fmt.Printf("%d bytes from %s: icmp_seq=%d time=%v ttl=%v\n",
 			preprossedPacket.bytes, preprossedPacket.ip, preprossedPacket.seqNo,
 			preprossedPacket.rtt, preprossedPacket.ttl)
@@ -124,7 +127,7 @@ func  (ping *pingHandler)processPacket(packet *recvPacket) error {
 	if msg.Type != ipv4.ICMPTypeEchoReply && msg.Type != ipv6.ICMPTypeEchoReply {
 		return nil
 	}
-	 _, ok := msg.Body.(*icmp.Echo)
+	_, ok := msg.Body.(*icmp.Echo)
 	if ok {
 		ping.totalRecv++
 
@@ -142,7 +145,7 @@ func (ping *pingHandler)sendICMP(c *icmp.PacketConn) error{
 		requestType = ipv6.ICMPTypeEchoRequest
 	}
 
-	t := append(timeToBytes(time.Now()), intToBytes(1839682523836159141)...)
+	t := intToBytes(time.Now().Unix())
 	body := &icmp.Echo{
 		ID:   ping.ID,
 		Seq:  ping.seqNo,
@@ -200,6 +203,7 @@ func (ping *pingHandler)receiveICMP(c *icmp.PacketConn, ) (*recvPacket,error) {
 		return nil,err
 	}
 
+
 	return &recvPacket{
 		bytes: n,
 		seqNo: ping.seqNo,
@@ -210,15 +214,6 @@ func (ping *pingHandler)receiveICMP(c *icmp.PacketConn, ) (*recvPacket,error) {
 }
 
 
-
-func timeToBytes(t time.Time) []byte {
-	nsec := t.UnixNano()
-	b := make([]byte, 8)
-	for i := uint8(0); i < 8; i++ {
-		b[i] = byte((nsec >> ((7 - i) * 8)) & 0xff)
-	}
-	return b
-}
 
 
 func intToBytes(tracker int64) []byte {
