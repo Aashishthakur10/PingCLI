@@ -1,10 +1,10 @@
-package Main
+package main
 
 import (
 	"flag"
 	"fmt"
 )
-func main() {
+func main(){
 	message := string("Allows the user to select the maximum amount of the pings")
 	limit := flag.Int("l",0,message)
 	flag.Parse() //Get host name/link
@@ -18,12 +18,9 @@ func main() {
 	pingHandler,err := ping(hostname,*limit)
 	if err != nil{
 		fmt.Print("Encountered Error: ", err.Error())
+		return
 	}
 	pingHandler.start()
-
-
-
-
 
 }
 
