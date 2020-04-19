@@ -9,7 +9,7 @@
 // 3. Display stats: Displays various statistics about packets and RTT (Use -stats=true)
 // 4. RTT limit: In case this limit is surpassed report the user. (Use -rtt=<limit>)
 //
-//
+// Test and ran in goLand
 // Author: Aashish Thakur
 package main
 
@@ -22,27 +22,27 @@ import (
 const (
 	message = string("Allows the user to select the maximum amount of the pings")
 	rttMessage = string("Allows the user to select an RTT limit in ms")
-	statsMessage = string("Allows the user to select the display of stats")
+	statsMessage = string("Allows the user to select whether or not to display of stats")
 	intervalMessage = string("Allows the user to select interval after which every packet is sent")
 )
 
-func main(){
+func main() {
 
-	limit := flag.Int("l",0,message)
-	rttLimit := flag.Int64("rtt",0,rttMessage)
-	getStats := flag.Bool("stats",false,statsMessage)
+	limit := flag.Int("l", 0, message)
+	rttLimit := flag.Int64("rtt", 0, rttMessage)
+	getStats := flag.Bool("stats", false, statsMessage)
 	interval := flag.Duration("i", time.Second, intervalMessage)
 
 	flag.Parse() //Get host name/link
 
-	if flag.NArg()==0 {
+	if flag.NArg() == 0 {
 		flag.Usage()
 		return
 	}
 
 	hostname := flag.Arg(0)
-	pingHandler,err := ping(hostname)
-	if err != nil{
+	pingHandler, err := ping(hostname)
+	if err != nil {
 		fmt.Print("Encountered Error: ", err.Error())
 		return
 	}
@@ -56,4 +56,3 @@ func main(){
 	pingHandler.start()
 
 }
-

@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0373e0a0-93ca-4483-b350-a7af03bfa2d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pManager.go" beforeDir="false" afterPath="$PROJECT_DIR$/pManager.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pingMain.go" beforeDir="false" afterPath="$PROJECT_DIR$/pingMain.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
       <module name="pingCLI" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
-      <parameters value="-i=5s www.reddit.com" />
+      <parameters value="-i=1s www.reddit.com" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/pingMain.go" />
       <package value="PingCLI" />
@@ -93,10 +91,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587274104611">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587276275663">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1587274104611" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1587276275663" />
     <state x="406" y="96" key="#go_build_PingCLI" timestamp="1587020371759">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -105,38 +103,38 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="483" y="160" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1587270700279" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1587274106211">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1587276258641">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587274106211" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1587274106209">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587276258641" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1587276258639">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587274106209" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1587274106208">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587276258639" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1587276258638">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587274106208" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1587274106211">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587276258638" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1587276258640">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587274106211" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1587273137749">
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587276258640" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1587276205270">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587273137749" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1587273137748">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587276205270" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1587276205270">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1587273137748" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1587273137748">
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1587276205270" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1587276205269">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1587273137748" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1587273137749">
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1587276205269" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1587276205270">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1587273137749" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1587276205270" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1586950472671">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -139,7 +139,7 @@ func (ping *pingHandler) start() {
 			err = ping.processPacket(preprossedPacket)
 
 			if err != nil {
-				fmt.Errorf("An error has occured: ", err.Error())
+				fmt.Print("An error has occured: ", err.Error())
 			}
 
 			preprossedPacket.rtt = time.Since(receivedAt)
